@@ -7,12 +7,23 @@
     <style>
        body{
          background-color:salmon;
+         animation-name: theThing;
+         animation-duration: 4s;
+         animation-iteration-count: infinite;
+         animation-delay: 2s;      
       }
       hr{
         color: black;
       }
       img{
         margin: 100px;
+      }
+      @keyframes theThing{
+        0% {background-color: salmon;}
+        25% {background-color: lightSalmon;}
+        50% {background-color: salmon;}
+        75% {background-color: darkSalmon;}
+        100% {background-color: salmon;}
       }
     </style>
   </head>
