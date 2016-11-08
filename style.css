@@ -1,25 +1,14 @@
-       body{
-         background-color:salmon;
-         /*animation-name: theThing;
-         animation-duration: 10s;
-         animation-iteration-count: infinite;
-         animation-delay: 2s;*/      
-      }
-      hr{
-        color: black;
-      }
-      img{
-        margin: auto;
-        display: block;
-      }
-      @keyframes theThing{
-        0% {background-color: salmon;}
-        25% {background-color: lightSalmon;}
-        50% {background-color: salmon;}
-        75% {background-color: darkSalmon;}
-        100% {background-color: salmon;}
-      }
-      .center{
-        padding: 70px 0px;
-        text-align: center;
-      }
+img {
+  margin: auto;
+  display: block;
+}
+.center {
+   //padding: 70px 0px;
+   text-align: center;
+ }
+ table, th, td{
+     border: 1px solid black;
+ }
+ table{
+     border-collapse: collapse;
+ }
