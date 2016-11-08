@@ -3,7 +3,7 @@ img {
   display: block;
 }
 .center {
-   //padding: 70px 0px;
+   padding: 70px 0px;
    text-align: center;
  }
  table, th, td{
@@ -11,4 +11,7 @@ img {
  }
  table{
      border-collapse: collapse;
+ }
+ body {
+     background-color: lightblue;
  }
