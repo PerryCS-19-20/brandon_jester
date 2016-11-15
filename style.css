@@ -11,6 +11,7 @@ img {
  }
  table{
      border-collapse: collapse;
+     align: center;
  }
  body {
      background-color: lightblue;
