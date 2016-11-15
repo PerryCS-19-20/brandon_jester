@@ -1,0 +1,31 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Test things and stuff
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <textarea rows="10" cols="80" id="inputText">
+            Input html to test here
+        </textarea>
+        <button onclick="testHTML();">
+            TEST THE THING!
+        </button>
+        <br>
+        <span id="spanTag">
+        </span>
+        <script>
+            function testHTML(uerInput){
+              var userInput = document.getElementById("inputText");
+              var theSpan = document.getElementById("spanTag");
+              theSpan.innerHTML = userInput.value;
+            }
+        </script>
+    </body>
+</html>
