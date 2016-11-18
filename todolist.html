@@ -1,0 +1,39 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            To do:
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <table align="center">
+            <tr>
+                <td>
+                    Return to Home: <a href="index.html">Home</a>
+                </td>
+            </tr>
+        </table>
+         <textarea rows="10" cols="80" id="inputText">
+            Input list to create here
+        </textarea>
+        <button onclick="createList();">
+            TEST THE THING!
+        </button>
+        <ul id="listArea">
+        </ul>
+        <script>
+            function createList(){
+                var listItems = document.getElementById("inputText");
+                var listThing = document.getElementById("listArea");
+                var list = document.createElement("li");
+                list.textContent = listItems.value;
+                listThing.appendChild(list);
+            }
+        </script>
+    </body>
+</html>
