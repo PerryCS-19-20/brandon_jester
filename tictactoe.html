@@ -1,0 +1,84 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tic Tac Toe
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            td.game{
+                border: 1px solid black;
+                height: 100px;
+                width: 100px;
+                border-collapse: collapse;
+                font-size: 80px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table align="center">
+            <tr>
+                <td>
+                    Return to Home: <a href="index.html">Home</a>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td id="1" class="game" onclick="play('1');"></td>
+                <td id="2" class="game" onclick="play('2');"></td>
+                <td id="3" class="game" onclick="play('3');"></td>
+            </tr>
+            <tr>
+                <td id="4" class="game" onclick="play('4');"></td>
+                <td id="5" class="game" onclick="play('5');"></td>
+                <td id="6" class="game" onclick="play('6');"></td>
+            </tr>
+            <tr>
+                <td id="7" class="game" onclick="play('7');"></td>
+                <td id="8" class="game" onclick="play('8');"></td>
+                <td id="9" class="game" onclick="play('9');"></td>
+            </tr>
+        </table>
+        <button onclick="reset();">RESET</button>
+        <script>
+            var player = "X";
+            function play(box){
+                var clicked = document.getElementById(box);
+                if(clicked.textContent === ""){
+                    clicked.textContent = player;
+                }
+                if(player === "X"){
+                    player = "O";
+                }else{
+                player = "X";
+                }
+            }
+            function reset(){
+                var one = document.getElementById(1);
+                var two = document.getElementById(2);
+                var three = document.getElementById(3);
+                var four = document.getElementById(4);
+                var five = document.getElementById(5);
+                var six = document.getElementById(6);
+                var seven = document.getElementById(7);
+                var eight = document.getElementById(8);
+                var nine = document.getElementById(9);
+                one.textcontent= "";
+                two.textcontent= "";
+                three.textcontent= "";
+                four.textcontent= "";
+                five.textcontent= "";
+                six.textcontent= "";
+                seven.textcontent= "";
+                eight.textcontent= "";
+                nine.textcontent= "";
+            }
+        </script>
+    </body>
+</html>
