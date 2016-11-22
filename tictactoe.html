@@ -50,15 +50,15 @@ and open the template in the editor.
         <script>
             var player = "X";
             function checkWin(win){
-                var one = document.getElementById(1).textcontent;
-                var two = document.getElementById(2).textcontent;
-                var three = document.getElementById(3).textcontent;
-                var four = document.getElementById(4).textcontent;
-                var five = document.getElementById(5).textcontent;
-                var six = document.getElementById(6).textcontent;
-                var seven = document.getElementById(7).textcontent;
-                var eight = document.getElementById(8).textcontent;
-                var nine = document.getElementById(9).textcontent;
+                var one = document.getElementById('1').textContent;
+                var two = document.getElementById('2').textContent;
+                var three = document.getElementById('3').textContent;
+                var four = document.getElementById('4').textContent;
+                var five = document.getElementById('5').textContent;
+                var six = document.getElementById('6').textContent;
+                var seven = document.getElementById('7').textContent;
+                var eight = document.getElementById('8').textContent;
+                var nine = document.getElementById('9').textContent;
                 win = false;
                 if(one === player && two === player && three === player){
                     win = true;
@@ -81,31 +81,30 @@ and open the template in the editor.
             }
             function play(box){
                 var clicked = document.getElementById(box);
-                var winCon = document.getElementById(wincondition);
-                var win = false;
+                var winCon = document.getElementById('wincondition');
                 if(clicked.textContent === ""){
                     clicked.textContent = player;
+                }
+                var win = checkWin();
+                if(win === true){
+                    winCon.textContent = "YOU WIN!!!!!";
                 }
                 if(player === "X"){
                     player = "O";
                 }else{
                 player = "X";
                 }
-                checkWin(win);
-                /*if(win === true){*/
-                    winCon.textcontent = "YOU WIN!!!!!";
-                /*}*/
             }
             function reset(){
-                var one = document.getElementById(1);
-                var two = document.getElementById(2);
-                var three = document.getElementById(3);
-                var four = document.getElementById(4);
-                var five = document.getElementById(5);
-                var six = document.getElementById(6);
-                var seven = document.getElementById(7);
-                var eight = document.getElementById(8);
-                var nine = document.getElementById(9);
+                var one = document.getElementById("1");
+                var two = document.getElementById('2');
+                var three = document.getElementById('3');
+                var four = document.getElementById('4');
+                var five = document.getElementById('5');
+                var six = document.getElementById('6');
+                var seven = document.getElementById('7');
+                var eight = document.getElementById('8');
+                var nine = document.getElementById('9');
                 one.textcontent = "";
                 two.textcontent = "";
                 three.textcontent = "";
