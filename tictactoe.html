@@ -45,11 +45,44 @@ and open the template in the editor.
                 <td id="9" class="game" onclick="play('9');"></td>
             </tr>
         </table>
-        <button onclick="reset();">RESET</button>
+        <button onclick="reset();">RESET (WIP)</button>
+        <p id="wincondition"></p>
         <script>
             var player = "X";
+            function checkWin(win){
+                var one = document.getElementById(1).textcontent;
+                var two = document.getElementById(2).textcontent;
+                var three = document.getElementById(3).textcontent;
+                var four = document.getElementById(4).textcontent;
+                var five = document.getElementById(5).textcontent;
+                var six = document.getElementById(6).textcontent;
+                var seven = document.getElementById(7).textcontent;
+                var eight = document.getElementById(8).textcontent;
+                var nine = document.getElementById(9).textcontent;
+                win = false;
+                if(one === player && two === player && three === player){
+                    win = true;
+                }else if(one === player && five === player && nine === player){
+                    win = true;
+                }else if(one === player && four === player && seven === player){
+                    win = true;
+                }else if(two === player && five === player && eight === player){
+                    win = true;
+                }else if(three === player && six === player && nine === player){
+                    win = true;
+                }else if(three === player && five === player && seven === player){
+                    win = true;
+                }else if(four === player && five === player && six === player){
+                    win = true;
+                }else if(seven === player && eight === player && nine === player){
+                    win = true;
+                }
+                return win;
+            }
             function play(box){
                 var clicked = document.getElementById(box);
+                var winCon = document.getElementById(wincondition);
+                var win = false;
                 if(clicked.textContent === ""){
                     clicked.textContent = player;
                 }
@@ -58,6 +91,10 @@ and open the template in the editor.
                 }else{
                 player = "X";
                 }
+                checkWin(win);
+                /*if(win === true){*/
+                    winCon.textcontent = "YOU WIN!!!!!";
+                /*}*/
             }
             function reset(){
                 var one = document.getElementById(1);
@@ -69,15 +106,15 @@ and open the template in the editor.
                 var seven = document.getElementById(7);
                 var eight = document.getElementById(8);
                 var nine = document.getElementById(9);
-                one.textcontent= "";
-                two.textcontent= "";
-                three.textcontent= "";
-                four.textcontent= "";
-                five.textcontent= "";
-                six.textcontent= "";
-                seven.textcontent= "";
-                eight.textcontent= "";
-                nine.textcontent= "";
+                one.textcontent = "";
+                two.textcontent = "";
+                three.textcontent = "";
+                four.textcontent = "";
+                five.textcontent = "";
+                six.textcontent = "";
+                seven.textcontent = "";
+                eight.textcontent = "";
+                nine.textcontent = "";
             }
         </script>
     </body>
