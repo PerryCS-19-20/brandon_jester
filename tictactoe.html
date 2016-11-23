@@ -45,7 +45,7 @@ and open the template in the editor.
                 <td id="9" class="game" onclick="play('9');"></td>
             </tr>
         </table>
-        <button onclick="reset();">RESET (WIP)</button>
+        <button onclick="reset();">RESET</button>
         <p id="wincondition"></p>
         <script>
             var player = "X";
@@ -105,15 +105,17 @@ and open the template in the editor.
                 var seven = document.getElementById('7');
                 var eight = document.getElementById('8');
                 var nine = document.getElementById('9');
-                one.textcontent = "";
-                two.textcontent = "";
-                three.textcontent = "";
-                four.textcontent = "";
-                five.textcontent = "";
-                six.textcontent = "";
-                seven.textcontent = "";
-                eight.textcontent = "";
-                nine.textcontent = "";
+                var winCon = document.getElementById('wincondition');
+                one.textContent = "";
+                two.textContent = "";
+                three.textContent = "";
+                four.textContent = "";
+                five.textContent = "";
+                six.textContent = "";
+                seven.textContent = "";
+                eight.textContent = "";
+                nine.textContent = "";
+                winCon.textContent = "";
             }
         </script>
     </body>
