@@ -18,6 +18,12 @@ and open the template in the editor.
                 font-size: 80px;
                 text-align: center;
             }
+            @font-face{
+                font-family:'Geholiday';
+                src:ul('https://perryma.tk/se/Geholiday.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
         </style>
     </head>
     <body>
@@ -28,7 +34,7 @@ and open the template in the editor.
                 </td>
             </tr>
         </table>
-        <table>
+        <table style="font-family:'Geholiday'">
             <tr>
                 <td id="1" class="game" onclick="play('1');"></td>
                 <td id="2" class="game" onclick="play('2');"></td>
@@ -47,6 +53,48 @@ and open the template in the editor.
         </table>
         <button onclick="reset();">RESET</button>
         <p id="wincondition"></p>
+        <script src="https://perryma.tk/se/holidays.js">
+            function getLetter(player){
+                var day = new Date();
+                if(day === "Thanksgiving"){
+                    if(player === "X"){
+                        return("n");
+                    }else if(player === "O"){
+                        return("m")
+                    }
+                }else if(day === "Christmas"){
+                    if(player === "X"){
+                        return("p");
+                    }else if(player === "O"){
+                        return("o")
+                    }
+                }else if(day === "Easter"){
+                    if(player === "X"){
+                        return("d");
+                    }else if(player === "O"){
+                        return("e")
+                    }
+                }else if(day === "Valentines"){
+                    if(player === "X"){
+                        return("c");
+                    }else if(player === "O"){
+                        return("a")
+                    } 
+                }else if(day === "Halloween"){
+                    if(player === "X"){
+                        return("j");
+                    }else if(player === "O"){
+                        return("i")
+                    }
+                }else if(day === "4th of July"){
+                    if(player === "X"){
+                        return("g");
+                    }else if(player === "O"){
+                        return("h")
+                    }
+                }
+            }
+        </script>
         <script>
             var player = "X";
             function checkWin(win){
@@ -84,15 +132,15 @@ and open the template in the editor.
                 var winCon = document.getElementById('wincondition');
                 if(clicked.textContent === ""){
                     clicked.textContent = player;
-                }
-                var win = checkWin();
-                if(win === true){
-                    winCon.textContent = "YOU WIN!!!!!";
-                }
-                if(player === "X"){
-                    player = "O";
-                }else{
-                player = "X";
+                    var win = checkWin();
+                    if(win === true){
+                        winCon.textContent = "YOU WIN!!!!!";
+                    }
+                    if(player === "X"){
+                        player = "O";
+                    }else{
+                        player = "X";
+                    }
                 }
             }
             function reset(){
