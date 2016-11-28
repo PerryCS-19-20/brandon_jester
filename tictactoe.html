@@ -55,7 +55,7 @@ and open the template in the editor.
         <p id="wincondition"></p>
         <script src="https://perryma.tk/se/holidays.js">
             function getLetter(player){
-                var day = new Date();
+                var day = holiday();
                 if(day === "Thanksgiving"){
                     if(player === "X"){
                         return("n");
