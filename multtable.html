@@ -1,0 +1,57 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Multiplication table
+        </title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            table, td, th{
+                border: solid 1px;
+            }
+            td{
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body onload="buildTimesTable();">
+        <script>
+            function buildTimesTable() {
+                var timesTable = document.createElement("table");
+                timesTable.id = "timesTable";
+                var body = document.body;
+                body.appendChild(timesTable);
+                for(var i = 0; i < 11; i++){
+                    var tRow = document.createElement("tr");
+                    timesTable.appendChild(tRow);
+                    for(var j = 0; j < 11; j++){
+                        var tHead = document.createElement("th");
+                        var tData = document.createElement("td");
+                        if(i < 1){
+                            if(j === 0){
+                                tHead.textContent = "";
+                            }else{
+                                tHead.textContent = j;
+                            }
+                            tRow.appendChild(tHead);
+                        }else{
+                            tHead.textContent = i;
+                            tData.textContent = j * i;
+                            if(j > 0){
+                                tRow.appendChild(tData);
+                            }
+                            if(j === 0){
+                                tRow.appendChild(tHead);
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
