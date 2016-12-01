@@ -2,7 +2,6 @@ function buildMap(eleid){
     var space = document.getElementById(eleid);
     var list = document.createElement("ul");
     var subList = document.createElement("ul");
-    var listItem = document.createElement("li");
     var classProjects = document.createElement("li");
     classProjects.textContent = "Class Projects"; 
     list.appendChild(item("Home", "index.html"));
