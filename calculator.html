@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Pythagorean Theorem Calculator</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Pythagorean theorem</h1>
+        <img src="pythagoras-theorem.gif">
+        <h2>a<sup>2</sup> +  b<sup>2</sup> = c<sup>2</sup></h2>
+        a: <input type="number" id="aVal" placeholder="A value">
+        <br>
+        b: <input type="number" id="bVal" placeholder="B value">
+        <button onclick="calc();">Calculate</button>
+        <hr>
+        c: <input type="output" id="cVal" placeholder="C value" readonly>
+        <script>
+            function calc(){
+                var a = parseFloat(document.getElementById("aVal").value);
+                var b = parseFloat(document.getElementById("bVal").value);
+                var c = document.getElementById("cVal");
+                c.value = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)).toFixed(2);
+                
+            }
+        </script>
+    </body>
+</html>
