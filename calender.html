@@ -7,12 +7,41 @@ and open the template in the editor.
     <head>
         <title>Calender</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            table, td, th{
+                border: solid 1px;
+                border-collapse: collapse;
+            }
+            td{
+                text-align: right;
+            }
+        </style>
         <script>
             function makeCalender(){
-                var timesTable = document.createElement("table");
-                timesTable.id = "timesTable";
+                var calender = document.createElement("table");
+                calender.id = "timesTable";
+                var row = document.createElement("tr");
+                for(var i = 0; i < 32; i++){
+                        var head = document.createElement("th");
+                        var day = i + 1 - getFirstDay(month, year);
+                        var data = document.createElement("td");
+                        if(i % 7 === 0){
+                            row = document.createElement("tr");
+                        }
+                        if(i < 7){
+                            day = getDayName(i % 7);
+                            head.textContent= day;
+                            row.appendChild(head);
+                            calender.appendChild(row);
+                        }else{
+                            data.textContent = i;
+                            row.appendChild(data);
+                            calender.appendChild(row);
+                        }
+                    }
+                calender.appendChild(row);
                 var body = document.body;
-                body.appendChild(timesTable);
+                body.appendChild(calender);
             }
             function getDayName(dayNum){
                 switch(dayNum) {
