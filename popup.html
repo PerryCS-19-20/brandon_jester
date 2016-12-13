@@ -9,15 +9,11 @@ and open the template in the editor.
         <script>
             alert("Eureka!");
         </script>
-    </head>
-    <body>
-        <table align="center">
-            <tr>
-                <td>
-                    Return to Home: <a href="index.html">Home</a>
-                </td>
-            </tr>
-        </table>
+    <script src="sitemap.js"></script>
+    <link rel="stylesheet" type="text/css" href="menubar.css">
+  </head>
+  <body onload="buildMap('menubar');">
+      <div id="menubar"></div>
         <h1>
             I DID THE THING
         </h1>

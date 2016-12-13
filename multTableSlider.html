@@ -17,16 +17,12 @@ and open the template in the editor.
             td {
                 text-align: right;
             }
-        </style>      
-    </head>
-    <body onload="buildTimesTable();">
-        <table align="center">
-            <tr>
-                <td>
-                    Return to Home: <a href="index.html">Home</a>
-                </td>
-            </tr>
-        </table>
+            </style>
+<script src="sitemap.js"></script>
+    <link rel="stylesheet" type="text/css" href="menubar.css">
+  </head>
+  <body onload="buildMap('menubar'); buildTimesTable();">
+      <div id="menubar"></div>
         <h1>
             Multiplication Table
         </h1>

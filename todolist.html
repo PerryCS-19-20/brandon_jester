@@ -9,15 +9,11 @@ and open the template in the editor.
             To do:
         </title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <table align="center">
-            <tr>
-                <td>
-                    Return to Home: <a href="index.html">Home</a>
-                </td>
-            </tr>
-        </table>
+    <script src="sitemap.js"></script>
+    <link rel="stylesheet" type="text/css" href="menubar.css">
+  </head>
+  <body onload="buildMap('menubar');">
+      <div id="menubar"></div>
          <textarea rows="10" cols="80" id="inputText">
             Input list to create here
         </textarea>

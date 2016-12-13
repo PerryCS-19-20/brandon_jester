@@ -15,7 +15,7 @@ function buildMap(eleid){
     subList.appendChild(item("Tic-Tac-Toe", "tictactoe.html"));
     subList.appendChild(item("Multiplication", "multtable.html"));
     subList.appendChild(item("More Multiplication", "multTableSlider.html"));
-    list.appendChild(subList);
+    classProjects.appendChild(subList);
     space.appendChild(list);
 }
 
