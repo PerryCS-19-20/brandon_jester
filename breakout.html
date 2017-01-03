@@ -51,6 +51,10 @@ var isRunning = 0;
 
 var numBricks = 80;
 
+/* Checks to see if game has already started */
+		
+var started = 0;
+
 function start(){
 	drawRows();
 	ball = new Circle(BALL_RADIUS);
@@ -60,7 +64,10 @@ function start(){
 	paddle.setPosition(0, getHeight() - (PADDLE_OFFSET * 2));
 	add(paddle);
 	mouseMoveMethod(movePaddle);
-	mouseClickMethod(startGame);
+	if(started == 0){
+		mouseClickMethod(startGame);
+		started = 1;
+	}
 	//setTimer(draw, 20);
 	//setTimer(checkWin, 10);
 }
