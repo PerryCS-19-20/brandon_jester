@@ -60,6 +60,11 @@ function start(){
 	paddle.setPosition(0, getHeight() - (PADDLE_OFFSET * 2));
 	add(paddle);
 	mouseMoveMethod(movePaddle);
+	mouseClickMethod(startGame);
+	//setTimer(draw, 20);
+	//setTimer(checkWin, 10);
+}
+function startGame(){
 	setTimer(draw, 20);
 	setTimer(checkWin, 10);
 }
