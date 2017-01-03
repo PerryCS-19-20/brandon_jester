@@ -64,12 +64,12 @@ function start(){
 	paddle.setPosition(0, getHeight() - (PADDLE_OFFSET * 2));
 	add(paddle);
 	mouseMoveMethod(movePaddle);
-	if(started == 0){
-		mouseClickMethod(startGame);
-		started = 1;
-	}
-	//setTimer(draw, 20);
-	//setTimer(checkWin, 10);
+	//if(started == 0){
+		//mouseClickMethod(startGame);
+		//started = 1;
+	//}
+	setTimer(draw, 20);
+	setTimer(checkWin, 10);
 }
 function startGame(){
 	setTimer(draw, 20);
